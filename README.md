@@ -15,4 +15,4 @@ Real-world use cases
 Beginner-friendly structure
 
 Challenge runs August 1–30, 2025
-Follow the journey on Twitter @o_fimijoba and LinkedIn (Oladokun Fimijoba Micheal)
+Follow the journey on Twitter (@o_fimijoba) and LinkedIn (Oladokun Fimijoba Micheal)
