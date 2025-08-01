@@ -1,1 +1,7 @@
-SELECT * FROM actor;
+# Day 1 – SELECT  Statement and Getting Started with Sakila DB
+
+# Task  
+Retrieve all details from the customer table 
+
+# Query
+SELECT * FROM customer;
