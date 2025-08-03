@@ -1,0 +1,5 @@
+# Show all the customers that made a payment between $3-$5
+SELECT  customer_id AS 'Customer ID', payment_id AS 'Payment ID',
+		payment_date AS 'Payment Date', amount AS 'Amount'
+FROM payment
+WHERE amount >= 3 AND amount <= 5;
