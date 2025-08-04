@@ -1,0 +1,4 @@
+# Show all films with a rating of PG, PG-13, or R 
+SELECT film_id, title, rating
+FROM film
+WHERE rating IN ('PG', 'PG-13', 'R');
