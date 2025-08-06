@@ -1,0 +1,4 @@
+# Show all payment amounts, rounded to 1 decimal place.
+SELECT payment_id AS 'Payment ID', payment_date AS 'Payment Date',
+	  round(amount, 1) AS ' Rounded Amount'
+FROM payment;
