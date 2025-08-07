@@ -1,0 +1,10 @@
+#  Group each payment into a tier based on the amount paid
+SELECT payment_id AS 'Payment ID',
+       amount AS 'Amount',
+       CASE
+           WHEN amount < 3 THEN 'Low'
+           WHEN amount BETWEEN 3 AND 6 THEN 'Medium'
+           ELSE 'High'
+       END AS 'Payment Tier'
+FROM payment
+WHERE amount > 1;
