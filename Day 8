@@ -1,0 +1,10 @@
+# Create a report showing: Customer ID, total payment (2 decimals places) and payment tier
+SELECT customer_id AS 'Customer ID',
+       ROUND(SUM(amount), 2) AS 'Total Payment',
+       CASE
+         WHEN SUM(amount) < 30 THEN 'Low'
+         WHEN SUM(amount) BETWEEN 30 AND 100 THEN 'Medium'
+         ELSE 'High'
+       END AS 'Payment Tier'
+FROM payment
+GROUP BY customer_id;
