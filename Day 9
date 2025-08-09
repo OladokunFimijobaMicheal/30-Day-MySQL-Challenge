@@ -1,0 +1,3 @@
+# Return only the unique film ratings
+SELECT DISTINCT rating AS 'Unique Ratings'
+FROM film
