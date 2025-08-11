@@ -1,0 +1,3 @@
+# Find the oldest film release year
+SELECT MIN(release_year) AS 'Oldest Release Year'
+ FROM film;
