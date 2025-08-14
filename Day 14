@@ -1,0 +1,13 @@
+# Find customers who have made more than 5 rentals, with the no of rentals they have
+SELECT C.customer_id AS 'Customer ID', concat(C.first_name, ' ' , C.last_name) AS 'Full Name',
+       (
+           SELECT COUNT(*)
+           FROM rental AS R
+           WHERE R.customer_id = C.customer_id
+       ) AS 'No of Rentals'
+FROM customer AS C
+WHERE (
+    SELECT COUNT(*)
+    FROM rental AS R
+    WHERE R.customer_id = C.customer_id
+) > 5;
