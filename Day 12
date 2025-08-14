@@ -1,0 +1,3 @@
+# Show each address and replace NULL address2 values with "N/A"
+SELECT address AS 'Address', COALESCE(address2, 'N/A') AS 'Address2'
+FROM address;
