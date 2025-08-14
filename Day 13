@@ -1,0 +1,13 @@
+/* From the film table, show all films where:  
+- If the rating is 'PG', only include those with rental_duration > 5  
+- Otherwise, only include those with rental_duration > 7
+ */
+ 
+SELECT film_id AS 'Film ID', title AS 'Title', rating AS 'Rating', rental_duration AS 'Rental Duration'
+FROM film
+WHERE 
+    CASE 
+        WHEN rating = 'PG' 
+            THEN CASE WHEN rental_duration > 5 THEN 1 ELSE 0 END
+        ELSE CASE WHEN rental_duration > 7 THEN 1 ELSE 0 END
+    END = 1;
