@@ -1,0 +1,13 @@
+# Combine names of actors and customers into one list (no duplicates)
+SELECT concat(first_name, ' ', last_name) AS 'Full Name', 'Actor' AS 'Role'
+FROM actor
+UNION
+SELECT concat(first_name, ' ', last_name), 'Customer' AS 'Role'
+FROM customer;
+
+# Same query but keeping duplicates
+SELECT concat(first_name, ' ', last_name) AS 'Full Name', 'Actor' AS 'Role'
+FROM actor
+UNION ALL
+SELECT concat(first_name, ' ', last_name), 'Customer' AS 'Role'
+FROM customer;
