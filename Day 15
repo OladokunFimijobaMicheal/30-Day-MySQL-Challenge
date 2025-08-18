@@ -1,0 +1,9 @@
+# Find all films that have at least one inventory copy
+SELECT f.film_id, f.title, COUNT(film_id) AS 'No of Film'
+FROM film AS f
+WHERE EXISTS (
+    SELECT 1
+    FROM inventory AS  i
+    WHERE i.film_id = f.film_id
+)
+GROUP BY f.film_id;
