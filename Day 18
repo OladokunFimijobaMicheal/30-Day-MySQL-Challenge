@@ -1,0 +1,7 @@
+# Find films that have been rented more than 30 times
+SELECT f.film_id AS 'Film ID', f.title AS 'Title', COUNT(r.rental_id) AS 'Number of Rentals'
+FROM film f
+JOIN inventory i ON f.film_id = i.film_id
+JOIN rental r ON i.inventory_id = r.inventory_id
+GROUP BY f.film_id, f.title
+HAVING COUNT(r.rental_id) > 30;
