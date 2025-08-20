@@ -1,0 +1,8 @@
+WITH rental_count AS (
+    SELECT customer_id AS 'Customer_ID', COUNT(rental_id) AS Total_Rentals
+    FROM rental
+    GROUP BY customer_id
+)
+SELECT Customer_Id, Total_Rentals
+FROM rental_count
+WHERE Total_Rentals > 10;
