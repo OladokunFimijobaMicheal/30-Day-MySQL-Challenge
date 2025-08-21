@@ -1,0 +1,9 @@
+# Rank films by rental rate within each category.
+SELECT 
+    c.name AS Category,
+    f.title AS 'Film Title',
+    f.rental_rate AS 'Rental Rate',
+    RANK() OVER (PARTITION BY c.name ORDER BY f.rental_rate DESC) AS 'Rank'
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id;
